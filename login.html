@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Múrmura :: Microrrevoluções Urbanas</title>
+
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="jquery-modal-1.0.js"></script>
+
+<script type="text/javascript">
+
+		$(function(){
+		$('a#entrar').bind('click',function(e){
+			$(this).hide(); 
+			$('#aba-02').fadeOut();
+			$('#aba-01').fadeOut();			
+			$('#aba-01').fadeIn();
+			$('a#entrar').show();
+			$('#entrar').css('background-color','#fff');
+			$('#criar').css('background-color','#efefef');
+		});});
+		
+		$(function(){
+		$('a#criar').bind('click',function(e){
+			$(this).hide(); 
+			$('#aba-01').fadeOut();			
+			$('#aba-02').fadeIn();
+			$('a#criar').show();
+			$('#criar').css('background-color','#fff');
+			$('#entrar').css('background-color','#efefef');
+		});});
+		
+</script>
+
+</head>
+<body>
+
+<div id="conteudo_modal">
+	
+    <div id="box">
+            
+        	<div id="abas">
+				
+                <a id="entrar" href="#" class="aba-link-entrar">ENTRAR</a>
+                <a id="criar" href="#" class="aba-link-criar">CRIAR CONTA</a>
+
+            </div>
+        
+        
+        <div id="aba-01">
+        	<a href="#"><img src="imgs/logar-face.jpg" width="253" height="40" border="0" style="margin-left:30px;" /></a>
+            
+            <form action="auth.php" method="post">
+            <font>Seu e-mail:</font><br />
+            <input type="text" name="email" class="text" /><br />
+            <font>Sua senha:</font><br />
+            <input type="password" name="senha" class="text" /><br />
+            <a href="#" class="link">Esqueceu sua senha?</a>
+       		<hr />
+        	
+            <input type="submit" value="ENTRAR" class="loguinho" />
+        	</form>
+        
+        </div>
+        
+        
+        <div id="aba-02">
+        	<a href="#"><img src="imgs/logar-face.jpg" width="253" height="40" border="0" style="margin-left:30px;" /></a>
+            
+            <form action="auth.php" method="post">
+            <font>Seu e-mail:</font><br />
+            <input type="text" name="email" class="text" /><br />
+            <font>Crie uma senha:</font><br />
+            <input type="password" name="senha" class="text" /><br /><br /><br />
+       		<hr />
+        	
+            <input type="submit" value="ENTRAR" class="loguinho" />
+        	</form>
+        
+        </div>
+        
+    </div>
+	
+</div>
+
+</body>
+</html>
